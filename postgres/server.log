@@ -14,3 +14,11 @@ STATEMENT:  CREATE TABLE historical_data
 	CREATE TABLE names (name_stock varchar(4))
 	SELECT * FROM names
 	INSERT INTO names VALUES ('Anna');
+ERROR:  syntax error at or near "pg_ctl" at character 1
+STATEMENT:  pg_ctl -D postgres stop -s -m fast
+	;
+LOG:  received fast shutdown request
+LOG:  aborting any active transactions
+LOG:  autovacuum launcher shutting down
+LOG:  shutting down
+LOG:  database system is shut down
