@@ -1,0 +1,16 @@
+LOG:  database system was shut down at 2016-09-14 23:31:19 PDT
+LOG:  MultiXact member wraparound protections are now enabled
+LOG:  database system is ready to accept connections
+LOG:  autovacuum launcher started
+ERROR:  syntax error at or near "DROP" at character 30
+STATEMENT:  CREATE TABLE historical_data
+	DROP TABLE historical_data
+	CREATE TABLE historical_data (date_day date, rate_day real, name_stock varchar(4))
+	INSERT INTO historical_data VALUES (07/07/1987, 100, "ANNA")
+	SELECT * FROM historical_data
+	INSERT INTO historical_data VALUES (07.07.1987, 100, "ANNA")
+	SELECT * FROM historical_data
+	 CREATE TABLE historical_data (date_day date, rate_day real, name_stock varchar(4))
+	CREATE TABLE names (name_stock varchar(4))
+	SELECT * FROM names
+	INSERT INTO names VALUES ('Anna');
